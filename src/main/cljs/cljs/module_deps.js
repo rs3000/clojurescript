@@ -71,6 +71,7 @@ let resolver = enhancedResolve.create({
 });
 
 let md = mdeps({
+    ignoreMissing: true,
     resolve: function (id, parentOpts, cb) {
         // set the basedir properly so we don't try to resolve requires in the Closure
         // Compiler processed `node_modules` folder.
